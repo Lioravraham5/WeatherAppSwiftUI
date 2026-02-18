@@ -53,3 +53,14 @@ extension Weather {
         }
     }
 }
+
+struct WeatherResult {
+    let weather: Weather
+    let isFromCache: Bool
+}
+
+struct WeatherListResult {
+    let weathers: [Weather]
+    let isFromCache: Bool
+}
+

@@ -45,6 +45,11 @@ struct CityListView: View {
                         path.append(weather)
                     }
             }
+            .safeAreaInset(edge: .top) {
+                if viewModel.isOffline {
+                    OfflineBannerView()
+                }
+            }
             .navigationTitle("Cities Weather")
             .navigationBarTitleDisplayMode(.large)
             
@@ -61,7 +66,10 @@ struct CityListView: View {
             // is handled here and navigates to the details screen.
             .navigationDestination(for: Weather.self) { weather in
                 // TODO: Replace with CityDetailsView(weather: weather)
-                CityDetailsView(weather: weather)
+                CityDetailsView(
+                    weather: weather,
+                    initialIsOffline: viewModel.isOffline
+                )
             }
             
             // Displays a loading indicator on top of the content

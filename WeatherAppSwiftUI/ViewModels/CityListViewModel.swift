@@ -64,8 +64,10 @@ final class CityListViewModel: ObservableObject {
         alertItem = nil
         
         do {
-            let weatherList = try await repository.fetchWeatherForCities(cities)
-            self.citiesWeather = weatherList
+            let result = try await repository.fetchWeatherForCities(cities)
+            self.citiesWeather = result.weathers
+            self.isOffline = result.isFromCache
+            
         } catch {
             handleNetworkError(error)
         }

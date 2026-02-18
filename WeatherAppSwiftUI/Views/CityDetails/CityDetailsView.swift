@@ -11,11 +11,15 @@ struct CityDetailsView: View {
     
     @StateObject private var viewModel: CityDetailsViewModel
     
-    init(weather: Weather, repository: WeatherRepository = WeatherRepositoryImpl()) {
+    init(weather: Weather,
+         repository: WeatherRepository = WeatherRepositoryImpl(),
+         initialIsOffline: Bool
+    ) {
         _viewModel = StateObject(
             wrappedValue: CityDetailsViewModel(
                 weather: weather,
-                repository: repository
+                repository: repository,
+                initialIsOffline: initialIsOffline
             )
         )
     }
@@ -101,6 +105,11 @@ struct CityDetailsView: View {
                 dismissButton: .default(Text("OK"))
             )
         }
+        .safeAreaInset(edge: .top) {
+            if viewModel.isOffline {
+                OfflineBannerView()
+            }
+        }
     }
 }
 
@@ -116,7 +125,8 @@ struct CityDetailsView: View {
                 windSpeed: 10.5,
                 iconID: 800,
                 weatherDescription: "Partly Cloudy"
-            )
+            ),
+            initialIsOffline: false
         )
     }
 }

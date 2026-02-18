@@ -19,10 +19,11 @@ final class CityDetailsViewModel: ObservableObject {
     private let repository: WeatherRepository
     private let cityName: String
     
-    init(weather: Weather, repository: WeatherRepository) {
+    init(weather: Weather, repository: WeatherRepository, initialIsOffline: Bool) {
         self.weather = weather
         self.cityName = weather.cityName
         self.repository = repository
+        self.isOffline = initialIsOffline
     }
     
     func refreshData() async {
@@ -31,8 +32,9 @@ final class CityDetailsViewModel: ObservableObject {
         alertItem = nil
         
         do {
-            let updatedWeather = try await repository.fetchWeather(for: cityName)
-            self.weather = updatedWeather
+            let result = try await repository.fetchWeather(for: cityName)
+            self.weather = result.weather
+            self.isOffline = result.isFromCache
         } catch {
             handleNetworkError(error)
         }

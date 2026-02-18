@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		607B325A2F35D4610050C158 /* WeatherAppSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherAppSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		60C8ABBA2F44725A00E5B70D /* WeatherAppSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherAppSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -33,16 +33,8 @@
 			isa = PBXGroup;
 			children = (
 				607B325C2F35D4610050C158 /* WeatherAppSwiftUI */,
-				607B325B2F35D4610050C158 /* Products */,
+				60C8ABBA2F44725A00E5B70D /* WeatherAppSwiftUI.app */,
 			);
-			sourceTree = "<group>";
-		};
-		607B325B2F35D4610050C158 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				607B325A2F35D4610050C158 /* WeatherAppSwiftUI.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -67,7 +59,7 @@
 			packageProductDependencies = (
 			);
 			productName = WeatherAppSwiftUI;
-			productReference = 607B325A2F35D4610050C158 /* WeatherAppSwiftUI.app */;
+			productReference = 60C8ABBA2F44725A00E5B70D /* WeatherAppSwiftUI.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -95,7 +87,7 @@
 			mainGroup = 607B32512F35D4610050C158;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 607B325B2F35D4610050C158 /* Products */;
+			productRefGroup = 607B32512F35D4610050C158;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
