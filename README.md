@@ -2,6 +2,8 @@
 ## Overview
 WeatherAppSwiftUI is a clean and modern iOS application built with SwiftUI that integrates with the [OpenWeatherMap](https://openweathermap.org/api) public API to display real-time weather information for multiple cities.
 
+https://github.com/user-attachments/assets/7c3fc805-3850-4b25-b529-4e6dc601079e
+
 ## 🔍 Features
 ### Main Screen – Cities Weather
 - Displays a list of predefined cities.
