@@ -25,10 +25,13 @@ https://github.com/user-attachments/assets/7c3fc805-3850-4b25-b529-4e6dc601079e
 - **When offline:**
   - The app retrieves the last available weather data from Core Data.
   - An offline banner is displayed.
+
+**sqlite file:**
+
+ <img src="https://github.com/user-attachments/assets/9cfc7977-6b70-49b5-912c-811fde185212" alt="Core data" style="width: 100%; height: 100%;">
  
 ## 🧩 Architecture
 The project follows a clean MVVM architecture with repository pattern.
-
 | Layer | Responsibility | Key Components |
 |-------|---------------|----------------|
 | **App** | Application entry point and dependency injection configuration | `WeatherApp`, root setup |
